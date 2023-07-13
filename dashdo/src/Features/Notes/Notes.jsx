@@ -9,8 +9,8 @@ import {
   selectNote,
   fetchNotes,
   saveNotesOnDatabase,
-} from "./noteSlice";
-import { copy } from "./noteSlice";
+} from "./NoteSlice";
+import { copy } from "./NoteSlice";
 
 function Notes() {
   const note = useSelector(selectNote);

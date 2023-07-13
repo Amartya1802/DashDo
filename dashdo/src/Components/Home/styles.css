@@ -1,0 +1,10 @@
+
+.navbar {
+    display: flex;
+    background-color: rgb(152, 214, 231);
+    height: 74px;
+}
+
+.logo {
+    margin-left: 3rem;
+}

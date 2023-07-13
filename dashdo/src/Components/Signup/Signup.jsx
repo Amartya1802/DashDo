@@ -119,8 +119,7 @@ export default function Signup() {
                                     <div className="opacity-25">
                                         <strong>
                                             <h5>
-                                            <i className="bi bi-exclamation-circle-fill"></i> Without
-                                            Signup - You may lose your data
+                                            <i className="bi bi-exclamation-circle-fill"></i> Sign/Log In to save your tasks
                                             </h5>
                                         </strong>
                                     </div>

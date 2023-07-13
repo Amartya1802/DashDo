@@ -1,0 +1,59 @@
+.App {
+    text-align: center;
+}
+
+.App-header {
+    background-color: #7bb2c1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.main-page {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.side-img{
+    width: 60%;
+    background-color: rgb(163, 209, 229)
+}
+
+.left-title{
+    /* justify-content: center; */
+    margin-left: 20%;
+    margin-top: 15%;
+    
+}
+
+.font-title{
+    font-size: 4rem;
+}
+
+.info{
+    margin-right: 7rem;
+    margin-left: 20%;
+    margin-top: 3rem;
+}
+
+.right-section{
+    width: 40%;
+}
+
+.right-heading{
+    margin-bottom: 4rem;
+}
+
+
+.row{
+    justify-content: center;
+    /* padding-left: 7rem; */
+}
+
+.row-items{
+    width: 70%;
+}

@@ -4,6 +4,9 @@ import {Link, useNavigate} from 'react-router-dom';
 import {auth} from '../../Auth/firebase';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 
+
+import "./styles.css";
+
 export default function Signup() {
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -60,10 +63,71 @@ export default function Signup() {
         <>
             <div className="main-page">
                 <div className="side-img">
-                    <h1>Hello. Dash Do!</h1>
+                    <div className="left-title">
+                        <h1 className="font-title">Dash Do!</h1>
+                    </div>
+                    <div className="info">
+                        <h3 className="info-txt">
+                        A quick, clean, and modern focus/productivity web application <br/>
+                        <br/>Keep track of your day at ease!
+                        </h3>
+                    </div>
                 </div>
+
                 <div className="right-section">
-                    
+                    <header className="App-header">
+                        <div className="right-heading">
+                            <h1>Let's get Started</h1>
+                        </div>
+                        <div className="container">
+                            <div className="row">
+                                <div className="row-items">
+                                    <input
+                                        className="form-control my-2"
+                                        ref={emailRef}
+                                        type="email"
+                                        name="given_email"
+                                        placeholder="Email"
+                                    />
+                                    <input
+                                        className="form-control my-2"
+                                        ref={passwordRef}
+                                        type="password"
+                                        name="give_pass"
+                                        placeholder="Password [Minimum 6 characters]"
+                                    />
+                                    <div className="submit">
+                                        <button
+                                            className="btn btn-primary my-2 w-100"
+                                            onClick={handleSignup}
+                                        >
+                                            Signup
+                                        </button>
+                                        <button
+                                            className="btn btn-success my-2 w-100"
+                                            onClick={handleLogin}
+                                        >
+                                            Login
+                                        </button>
+                                    </div>
+                                    <Link
+                                        className="btn btn-sm btn-outline-warning my-3 w-100"
+                                        to="/dashboard"
+                                    >
+                                        Try without signup
+                                    </Link>
+                                    <div className="opacity-25">
+                                        <strong>
+                                            <h5>
+                                            <i className="bi bi-exclamation-circle-fill"></i> Without
+                                            Signup - You may lose your data
+                                            </h5>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
                 </div>
             </div>
         </>

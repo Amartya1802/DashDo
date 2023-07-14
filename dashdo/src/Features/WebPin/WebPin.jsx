@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { getAuth, onAuthStateChanged } from "firebase/Auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 import {
   addWebPin,
@@ -78,7 +78,6 @@ onAuthStateChanged(auth, (user) => {
                    name="link"
                    onChange={handleChange}
                    className="form-control"
-                   type="url"
                    placeholder="Website URL"
                    required
                    />

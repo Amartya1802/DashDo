@@ -9,7 +9,7 @@ import {
   collection,
 } from "@firebase/firestore";
 import { getAuth } from "@firebase/auth";
-import app from "../../firebase";
+import app from "../../Auth/firebase";
 
 const db = getFirestore(app);
 
@@ -18,7 +18,7 @@ const initialState = {
   saved: false,
 };
 
-export const getWebsites = createAsyncThunk("WebPin/fetch", async () => {
+export const getWebPins = createAsyncThunk("WebPin/fetch", async () => {
   const querySnapshot = await getDocs(
     collection(
       db,
@@ -66,7 +66,7 @@ export const removeWebPin = createAsyncThunk(
   }
 );
 
-export const websiteSlice = createSlice({
+export const WebpinSlice = createSlice({
   name: "WebPin",
   initialState,
   reducers: {},

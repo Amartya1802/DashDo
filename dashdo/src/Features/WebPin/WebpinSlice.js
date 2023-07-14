@@ -86,6 +86,6 @@ export const WebpinSlice = createSlice({
   },
 });
 
-export const selectWebsite = (state) => state.website.value;
+export const selectWebPin = (state) => state.website.value;
 
 export default WebpinSlice.reducer;

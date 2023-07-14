@@ -1,5 +1,8 @@
 import React, { useEffect } from "react";
 import Profile from "../Profile/Profile";
+import WebPins from "../../Features/WebPin/WebPin";
+import Notes from "../../Features/Notes/Notes";
+
 import "./styles.css"
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -28,6 +31,7 @@ function Home() {
                 </div>
             </div>
             {/* <h1>Hello!</h1> */}
+
         </>
     )
 }

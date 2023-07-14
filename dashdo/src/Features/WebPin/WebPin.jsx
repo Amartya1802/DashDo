@@ -21,7 +21,7 @@ const WebPin=()=>{
     
     const handleChange=(event)=>{
         event.preventDefault();
-        setwebPinData({...webPinData,[event.target.name]: event.target.value});
+        setWebPinData({...webPinData,[event.target.name]: event.target.value});
     };
     const webPins=useSelector(selectWebPin);
      
@@ -82,7 +82,7 @@ onAuthStateChanged(auth, (user) => {
                    required
                    />
                    <div className="delete">
-                    {webPinslmap((element,index)=>{
+                    {webPins.map((element,index)=>{
                         return(
                             <div key={index} className="col py-2">
                                 <label className="text-center w-50">{element.name}</label>

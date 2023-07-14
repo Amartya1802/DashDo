@@ -24,7 +24,7 @@ export const addTodo = createAsyncThunk("Todo/addTodo", async (Todo) => {
     await setDoc(
       doc(
         db,
-        `users/${getAuth().currentUser.uid}/dashdo/Todo/task/${Todo.id}`
+        `users/${getAuth().currentUser.uid}/dash-do/Todo/task/${Todo.id}`
       ),
       Todo
     );
@@ -38,7 +38,7 @@ export const fetchTodos = createAsyncThunk("Todo/fetchTodos", async () => {
   const querySnapshot = await getDocs(
     collection(
       getFirestore(app),
-      `users/${getAuth().currentUser.uid}/dashdo/Todo/task`
+      `users/${getAuth().currentUser.uid}/dash-do/Todo/task`
     )
   );
 

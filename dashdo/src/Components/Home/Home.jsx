@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
+
 import Profile from "../Profile/Profile";
 import WebPins from "../../Features/WebPin/WebPin";
 import Notes from "../../Features/Notes/Notes";
+import Todo from '../../Features/ToDo/ToDo';
+import Goals from '../Goals/Goals';
 
 import "./styles.css"
 
@@ -31,6 +34,24 @@ function Home() {
                 </div>
             </div>
             {/* <h1>Hello!</h1> */}
+            <div className="container-fluid">
+                <div className="row">
+                <div className="col-md-6">
+                    <WebPins />
+                </div>
+                <div className="col-md-6 py-3">
+                    <div className="row">
+                    <div className="col-lg-6">
+                        {/* <Todo /> */}
+                    </div>
+                    <div className="col-lg-6">
+                        <Goals />
+                        <Notes />
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
 
         </>
     )

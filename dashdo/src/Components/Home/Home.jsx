@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-// import Settings from "./Settings";
+import Profile from "../Profile/Profile";
 import "./styles.css"
 
 import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -23,7 +23,8 @@ function Home() {
                     <h3>Dash Do</h3>
                 </div>
                 <div className="nav-right">
-                    <h3>Right section</h3>
+                    {/* <h3>Right section</h3> */}
+                    <Profile />
                 </div>
             </div>
             {/* <h1>Hello!</h1> */}

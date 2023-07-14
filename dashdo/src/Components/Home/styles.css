@@ -7,4 +7,10 @@
 
 .logo {
     margin-left: 3rem;
+    margin-top: -2rem;
+}
+
+.nav-right{
+    margin-right: 3rem;
+    margin-top: -2.3rem;
 }

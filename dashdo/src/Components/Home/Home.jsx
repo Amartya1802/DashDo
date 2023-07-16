@@ -42,7 +42,7 @@ function Home() {
                 <div className="col-md-6 py-3">
                     <div className="row">
                     <div className="col-lg-6">
-                        {/* <Todo /> */}
+                        <Todo />
                     </div>
                     <div className="col-lg-6">
                         <Goals />

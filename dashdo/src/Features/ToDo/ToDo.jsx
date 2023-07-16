@@ -11,6 +11,7 @@ function Todo() {
   const [task, setTask] = useState("");
 
   const todos = useSelector(selectTodo);
+  // const [todos_bypaas, setTodos_bypaas] = useState([])
   const dispatch = useDispatch();
   const dispatchRef = useRef(dispatch);
 
@@ -33,6 +34,13 @@ function Todo() {
     });
   }, [dispatchRef]);
 
+  // useEffect(()=>{
+  //   const temp_arr = fetchTodos()
+  //   setTodos_bypaas(temp_arr);
+  //   console.log(todos_bypaas);
+  // },[])
+
+  
   return (
     <div className="row">
       <div className="col-12">
@@ -49,7 +57,8 @@ function Todo() {
           </button>
         </div>
       </div>
-      {todos.map((element, index) => {
+      {todos?.map((element, index) => {
+        // console.log(element);
         return <Task task={element} key={index} c />;
       })}
     </div>

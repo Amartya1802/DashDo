@@ -52,9 +52,7 @@ export const addWebPin = createAsyncThunk("WebPin/add", async (website) => {
   }
 });
 
-export const removeWebPin = createAsyncThunk(
-  "website/remove",
-  async (name) => {
+export const removeWebPin = createAsyncThunk("website/remove", async (name) => {
     console.log("removing :", name);
     await deleteDoc(
       doc(

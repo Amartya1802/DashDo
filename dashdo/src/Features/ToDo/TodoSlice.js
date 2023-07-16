@@ -41,6 +41,8 @@ export const fetchTodos = createAsyncThunk("Todo/fetchTodos", async () => {
       `users/${getAuth().currentUser.uid}/dash-do/Todo/task`
     )
   );
+      
+  // adding the new todo in the existing list
 
   let TodoUpdateArray = [];
   querySnapshot.forEach((doc) => {
@@ -49,10 +51,12 @@ export const fetchTodos = createAsyncThunk("Todo/fetchTodos", async () => {
   return TodoUpdateArray;
 });
 
+
+// code for deleting a todo
 export const deleteTask = createAsyncThunk("Todo/deleteTodo", async (id) => {
   try {
     await deleteDoc(
-      doc(db, `users/${getAuth().currentUser.uid}/dashdo/Todo/task`, id)
+      doc(db, `users/${getAuth().currentUser.uid}/dash-do/Todo/task`, id)
     );
     return id;
   } catch (error) {
@@ -73,11 +77,13 @@ export const TodoSlice = createSlice({
         state.value = action.payload;
       })
       .addCase(deleteTask.fulfilled, (state, action) => {
-        state.value = state.value.filter((item) => item.id !== action.payload);
+        state.value = state.value?.filter((item) => item.id !== action.payload);
+        
       });
   },
 });
 
-export const selectTodo = (state) => state.Todo.value;
+// export const selectTodo = (state) => state.Todo?state.Todo.value:'';
+export const selectTodo = (state) => state.todo.value;
 
 export default TodoSlice.reducer;

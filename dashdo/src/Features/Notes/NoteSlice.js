@@ -7,12 +7,12 @@ import app from "../../Auth/firebase";
 const db = getFirestore(app);
 
 const initialState = {
-  value: "Loading...",
+  value: "Start typing here..",
   saved: false,
 };
 
 export const fetchNotes = createAsyncThunk("notes/fetchNotes", async () => {
-  const docRef = doc(db, `users/${getAuth().currentUser.uid}/dashboard/notes`);
+  const docRef = doc(db, `users/${getAuth().currentUser.uid}/dash-do/notes`);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
     return docSnap.data().text;
@@ -26,7 +26,7 @@ export const saveNotesOnDatabase = createAsyncThunk(
   async (note) => {
     try {
       await setDoc(
-        doc(db, "users/" + getAuth().currentUser.uid + "/dashboard/notes"),
+        doc(db, "users/" + getAuth().currentUser.uid + "/dash-do/notes"),
         {
           text: note,
         }

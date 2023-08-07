@@ -34,22 +34,33 @@ function Home() {
                 </div>
             </div>
             {/* <h1>Hello!</h1> */}
-            <div className="container-fluid">
-                <div className="row">
-                <div className="col-md-6">
-                    <WebPins />
-                </div>
-                <div className="col-md-6 py-3">
+
+            <div className="body-main">
+                <div className="container-fluid">
                     <div className="row">
-                    <div className="col-lg-6">
-                        <Todo />
+                        <div className="col-md-6 py-5">
+                            <div className="section1">
+                                <div className="row">
+                                    <div className="col-lg-6">
+                                        <div className="Goals">
+                                            <Goals />
+                                        </div>
+                                        <div className="Notes">
+                                            <Notes />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                        <div className="Todo">
+                                            <Todo />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <WebPins />
+                        </div>
                     </div>
-                    <div className="col-lg-6">
-                        <Goals />
-                        <Notes />
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
 
